@@ -5,7 +5,7 @@ public class Triangle09 {
         System.out.print("Masukkan nilai n = ");         
         int n = sc.nextInt();           
         int i = 1;         
-        while (i <= n) {    //debug sementara         
+        while (i <= n) {            
             int j = 0;             
             while (j < i) {                 
                 System.out.print("*");                 
