@@ -16,6 +16,8 @@ public class Tugas309 {
         int totalSemuaBarang = 0;
         int tokoTerbanyak = 0;
         int barangTerbanyak = -1;   
+        String ringkasan = "";      
+
         for (int toko = 1; toko <= jumlahToko; toko++) {
             System.out.println("\nToko " + toko);
 
@@ -29,7 +31,6 @@ public class Tugas309 {
             } while (jumlahPelanggan < 0);
 
             int totalBarangToko = 0;  
-
             for (int p = 1; p <= jumlahPelanggan; p++) {
                 int barang;
                 do {
@@ -42,8 +43,8 @@ public class Tugas309 {
                 totalBarangToko += barang;
             }
 
-            System.out.println("  Total pelanggan : " + jumlahPelanggan);
-            System.out.println("  Total barang    : " + totalBarangToko);
+            ringkasan += "Toko " + toko + " - pelanggan: " + jumlahPelanggan
+                    + ", total barang: " + totalBarangToko + "\n";
 
             totalSemuaBarang += totalBarangToko;
 
@@ -54,10 +55,10 @@ public class Tugas309 {
             }
         }
 
-        System.out.println("\n==============================");
-        System.out.println("Total barang seluruh toko : " + totalSemuaBarang);
-        System.out.println("Toko dengan barang terbanyak: Toko " + tokoTerbanyak
-                + " (" + barangTerbanyak + " barang)");
+        System.out.println();
+        System.out.print(ringkasan);
+        System.out.println("Total barang seluruh toko: " + totalSemuaBarang);
+        System.out.println("Toko dengan barang terbanyak: " + tokoTerbanyak);
         sc.close();
     }
 }
